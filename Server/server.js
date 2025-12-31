@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const dbConnection = require('./dbConnection');
+const cors = require('cors');
 
 const todosRouter = require('./Router/todo_routes');
 
@@ -10,6 +11,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(cors())
 app.use('/todos',todosRouter);
 
 dbConnection();
