@@ -40,6 +40,7 @@
 - Async Data Handling
 - Responsive Design
 - Maintaining Clean Code
+- Re-rendering of code
 
 ## Backend
 
@@ -61,12 +62,14 @@
 ### Database
 
 ### Database Connection
-- MongoDB Compass
-- Create a new Connection 
-  `mongodb://localhost:27017/`
+- MongoDB Atlas
+- Created a new cluster
+- Created a user and password
+- Created an IP address `0.0.0.0/0`
+- Connection string 
+  `mongodb+srv://CodeAldous275:1ndia7491@cluster0.oziom.mongodb.net/todoListDB`
 
 ### Challenges in Back-end
-- No Authentication, anyone can access any routes
 - App crashes
 
 ## Commands
