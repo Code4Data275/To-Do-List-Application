@@ -41,6 +41,7 @@
 - Responsive Design
 - Maintaining Clean Code
 - Re-rendering of code
+- Difficult to remember ID for updation and deletion of task as it is a mix of characters
 
 ## Backend
 
@@ -71,6 +72,7 @@
 
 ### Challenges in Back-end
 - App crashes
+- Difficult to remember ID for updation and deletion of task as it is a mix of characters
 
 ## Commands
 - npm init
@@ -82,6 +84,8 @@
 - npm install tailwindcss @tailwindcss/vite
 - npm run dev
 
+## Deployment
+`https://todo-list-applico.netlify.app/`
 
 
 
