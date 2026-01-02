@@ -55,11 +55,11 @@
   - PUT: Update a task by its ID
   - DELETE: Delete a task by its ID
 
+### Database 
+
 #### Schema
 - ID => Unique Identifier
 - Description => Tasks entered by the user
-
-### Database
 
 ### Database Connection
 - MongoDB Atlas
