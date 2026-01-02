@@ -17,7 +17,7 @@ function UpdateStatus(){
 
     const fetchData = async() =>{
         try{
-            const res = await axios.get('http://localhost:3000/todos');
+            const res = await axios.get('https://to-do-list-application-9j0z.onrender.com/todos');
             setData(res.data.data);
         }catch(err){
             console.log(err);
@@ -33,7 +33,7 @@ function UpdateStatus(){
         }
 
         try{
-            await axios.put(`http://localhost:3000/todos/status/${input.id}`,{status: input.status});
+            await axios.put(`https://to-do-list-application-9j0z.onrender.com/todos/status/${input.id}`,{status: input.status});
             setInput({id:"",status:""})
             fetchData();
             alert('Status updated successfully');

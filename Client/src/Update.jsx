@@ -16,7 +16,7 @@ export default function Update(){
 
     const fetchData = async() =>{
         try{
-            const res = await axios.get('http://localhost:3000/todos');
+            const res = await axios.get('https://to-do-list-application-9j0z.onrender.com/todos');
             setData(res.data.data);
         }catch(err){
             console.log(err);
@@ -32,7 +32,7 @@ export default function Update(){
         }
 
         try{
-            await axios.put(`http://localhost:3000/todos/${input.id}`,{description: input.description});
+            await axios.put(`https://to-do-list-application-9j0z.onrender.com/todos/${input.id}`,{description: input.description});
             setInput({id:"", description: ""});
             fetchData();
             alert('Task updated successfully');

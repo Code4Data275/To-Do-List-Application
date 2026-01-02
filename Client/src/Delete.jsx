@@ -11,7 +11,7 @@ export default function Delete(){
 
     const fetchData = async() =>{
         try{
-            const res = await axios.get('http://localhost:3000/todos');
+            const res = await axios.get('https://to-do-list-application-9j0z.onrender.com/todos');
             setData(res.data.data);
         }catch(err){
             console.log(err);
@@ -27,7 +27,7 @@ export default function Delete(){
         }
 
         try{
-            await axios.delete(`http://localhost:3000/todos/${id}`)
+            await axios.delete(`https://to-do-list-application-9j0z.onrender.com/todos/${id}`)
             setId("");
             fetchData();
             alert("Task deleted successfully");

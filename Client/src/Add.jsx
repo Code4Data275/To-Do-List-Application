@@ -17,7 +17,7 @@ export default function Add(){
 
     const fetchData = async () =>{
         try{
-            const res = await axios.get('http://localhost:3000/todos');
+            const res = await axios.get('https://to-do-list-application-9j0z.onrender.com/todos');
             console.log(res.data)
             setData(res.data.data)
         }catch(err){
@@ -29,7 +29,7 @@ export default function Add(){
         e.preventDefault();
 
         try{
-           await axios.post('http://localhost:3000/todos',input);
+           await axios.post('https://to-do-list-application-9j0z.onrender.com/todos',input);
            fetchData();
            alert('Task Added');
            window.location.reload();
