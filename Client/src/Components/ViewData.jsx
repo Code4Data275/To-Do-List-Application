@@ -6,18 +6,17 @@ const ViewData = ({task}) => {
     const {dispatch} = useTaskContext();
 
     const handleDelete = async (e) =>{
-        const response = await axios.delete(`https://to-do-list-application-9j0z.onrender.com//todos/${task._id}`);
+        const response = await axios.delete(`https://to-do-list-application-1-b4fh.onrender.com/todos/${task._id}`);
 
         if(response.status === 200){
             dispatch({type:'DELETE_TASK',payload:task._id})
-            window.location.reload()
         }
     }
 
     const handleUpdate = async(e) =>{
         const newDescription = prompt('Update Task',task.description);
         if(!newDescription) return;
-        const response = await axios.put(`https://to-do-list-application-9j0z.onrender.com//todos/${task._id}`,{description: newDescription});
+        const response = await axios.put(`https://to-do-list-application-1-b4fh.onrender.com/todos/${task._id}`,{description: newDescription});
   
         if(response.status === 200){
             dispatch({type:'UPDATE_TASK',payload:response.data.data})
@@ -25,7 +24,7 @@ const ViewData = ({task}) => {
     }
 
     const handleStatusToggle = async() =>{
-        const response = await axios.put(`https://to-do-list-application-9j0z.onrender.com//status/${task._id}`,{status: !task.status});
+        const response = await axios.put(`https://to-do-list-application-1-b4fh.onrender.com/todos/status/${task._id}`,{status: !task.status});
 
         if(response.status === 200){
             dispatch({type:"UPDATE_TASK",payload:response.data.data});
