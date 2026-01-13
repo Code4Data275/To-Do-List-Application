@@ -1,13 +1,11 @@
-import { lazy, StrictMode, Suspense } from 'react'
+import React from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import { TaskContextProvider } from './Context/TaskContext.jsx'
+import App from './App.jsx'
 
-
-const App = lazy(()=>import('./App.jsx'))
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Suspense fallback={<div className='text-center mt-100 text-2xl'>Loading...</div>}>
+    <TaskContextProvider>
       <App />
-    </Suspense>
-  </StrictMode>,
+    </TaskContextProvider>
 )

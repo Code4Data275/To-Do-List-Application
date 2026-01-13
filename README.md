@@ -16,25 +16,27 @@
 - View the task 
 - Delete the task
 - Update the task status (Pending/Completed)
-- Search for tasks
 
 ### UI
-- Navigation bar with the title and links which routes to different features of this  application.
-- There will be 4 links:
-  - Add task => when user clicks this link, it routes to the page which contains input for user to enter the task and a dropdown to set the task status. 
-  - Update task => when user clicks this link it routes to the page which contains input for ID and Task Description for the user to update a specific task 
-  - Delete a task => when user clicks this link it routes to the page which contains input for ID for the user to delete the specific task.
-- Below every page there is a table which displays the task, status along with its ID and it updates automatically when the user updates, adds or deletes any task.
+- Header with the title `To Do List Application`
+- Input field and a button to add a task
+- Table to view the data, update the task status, update and delete task button
 
-### Components
-- App 
-- Add 
-- Update
-- Delete
+### Commponents
+- main
+- App
+- Add
+- Navbar
+- ViewData
+- Home
+- TaskContext
+- useTaskContext
 
 ### Hooks
 - useState
 - useEffect
+- useContext
+- useReducer
 
 ### Challenges in front-end
 - Async Data Handling
@@ -56,11 +58,14 @@
   - PUT: Update a task by its ID
   - DELETE: Delete a task by its ID
 
+- /todos/status/{id}
+  - PUT: Update task status by checkbox 
+
 ### Database 
 
 #### Schema
-- ID => Unique Identifier
 - Description => Tasks entered by the user
+- Status => Boolean value (Pending/Completed)
 
 ### Database Connection
 - MongoDB Atlas
@@ -72,7 +77,6 @@
 
 ### Challenges in Back-end
 - App crashes
-- Difficult to remember ID for updation and deletion of task as it is a mix of characters
 
 ## Commands
 - npm init

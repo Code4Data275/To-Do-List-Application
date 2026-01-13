@@ -8,8 +8,8 @@ const taskSchema = new Schema({
         required: true
     },
     status: {
-       type: String,
-       required: true 
+       type: Boolean,
+       required: false
     }
 },{timestamps: true});
 

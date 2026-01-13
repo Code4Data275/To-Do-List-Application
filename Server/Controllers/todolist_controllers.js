@@ -4,12 +4,6 @@ exports.getAllTasks = async(req,res) => {
     try{
         const tasks = await Task.find()
 
-        if(!tasks || tasks.length === 0){
-            return res.status(400).json({
-                success: false,
-                message: 'No tasks found'
-            })
-        }
         res.status(200).json({
             success: true,
             data: tasks
@@ -27,20 +21,20 @@ exports.addNewTasks = async(req,res) =>{
     try{
         const {description, status} = req.body;
 
-        if(!description || !status){
+        if(!description){
             return res.status(400).json({
                 success: false,
                 message: "Please provide all the details"
             })
         }
 
-        await Task.create({description, status});
-        const allTasks = await Task.find();
+        const newTask = await Task.create({description, status: status ?? false});
+        
 
         res.status(200).json({
             success: true,
             message: 'Task added successfully',
-            data: allTasks
+            data: newTask
         });
     }catch(err){
         res.status(500).json({
@@ -121,18 +115,16 @@ exports.updateStatus = async (req, res) =>{
         const {id} = req.params;
         const {status} = req.body;
 
-        if(!status){
+        if(typeof status !== "boolean"){
             return res.status(400).json({
                 success: false,
-                message: "Status is required"
+                message: "Status must be boolean"
             });
         }
 
-        const normalizedStatus = status.toLowerCase();
-
         const updateStatus = await Task.findByIdAndUpdate(
             id,
-            {status: normalizedStatus},
+            {status},
             {new: true}
         );
 
