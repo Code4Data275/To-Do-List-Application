@@ -22,7 +22,7 @@
 - Input field and a button to add a task
 - Table to view the data, update the task status, update and delete task button
 
-### Commponents
+### Components
 - main
 - App
 - Add
@@ -86,6 +86,7 @@
 - npm install mongoose
 - npm install mongodb
 - npm install tailwindcss @tailwindcss/vite
+- npm install axios
 - npm run dev
 
 ## Deployment
