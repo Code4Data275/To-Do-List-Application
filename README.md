@@ -43,7 +43,6 @@
 - Responsive Design
 - Maintaining Clean Code
 - Re-rendering of code
-- Difficult to remember ID for updation and deletion of task as it is a mix of characters
 
 ## Backend
 
@@ -76,7 +75,8 @@
   `mongodb+srv://CodeAldous275:1ndia7491@cluster0.oziom.mongodb.net/todoListDB`
 
 ### Challenges in Back-end
-- App crashes
+- Too many routes to handle
+- Difficult to configure database and server configuration
 
 ## Commands
 - npm init
