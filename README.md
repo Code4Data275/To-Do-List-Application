@@ -90,7 +90,7 @@
 - npm run dev
 
 ## Deployment
-`https://todo-list-applico.netlify.app/`
+`[https://todo-list-applico.netlify.app/]`
 
 
 
