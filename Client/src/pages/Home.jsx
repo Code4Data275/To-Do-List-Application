@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(()=>{
     const fetchTasks = async ()=>{
-        const response = await axios.get('http://localhost:3000/todos');
+        const response = await axios.get('https://to-do-list-application-1-b4fh.onrender.com/todos');
 
         if(response.status === 200){
             dispatch({type:'SET_TASK',payload:response.data.data});
