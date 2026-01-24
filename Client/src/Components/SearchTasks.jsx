@@ -19,7 +19,7 @@ const SearchTasks = () => {
     }
 
     try{
-        const response = await axios.get(`http://localhost:3000/todos/search?query=${search}`);
+        const response = await axios.get(`https://to-do-list-application-1-b4fh.onrender.com/todos/search?query=${search}`);
 
         if(response.data.length === 0){
             setMessage("No tasks found");

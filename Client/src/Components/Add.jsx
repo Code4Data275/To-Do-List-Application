@@ -10,7 +10,7 @@ const Add = () => {
   const handleSubmit = async (e) =>{
     e.preventDefault();
     const task = {description};
-    const response = await axios.post('http://localhost:3000/todos',{description, status: false});
+    const response = await axios.post('https://to-do-list-application-1-b4fh.onrender.com/todos',{description, status: false});
 
     if(response.status === 200){
       dispatch({type:'CREATE_TASK',payload:response.data.data});
