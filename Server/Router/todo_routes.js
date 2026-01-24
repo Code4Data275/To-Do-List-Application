@@ -1,6 +1,6 @@
 const express = require('express');
 
-const { getAllTasks, addNewTasks, updateTaskbyID, deleteTaskByID, updateStatus } = require('../Controllers/todolist_controllers');
+const { getAllTasks, addNewTasks, updateTaskbyID, deleteTaskByID, updateStatus, searchTask } = require('../Controllers/todolist_controllers');
 
 const router = express.Router();
 
@@ -19,5 +19,7 @@ router.delete('/:id',deleteTaskByID);
 //Update the status
 router.put('/status/:id',updateStatus);
 
-const Task = router;
-module.exports = Task
+//Search for tasks
+router.get("/search",searchTask);
+
+module.exports = router;

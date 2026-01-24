@@ -149,3 +149,16 @@ exports.updateStatus = async (req, res) =>{
     }
 }
 
+exports.searchTask = async(req, res)=>{
+    const {query} = req.query;
+
+    const tasks = await Task.find({
+        description: {$regex: query, $options: "i"},
+    });
+
+    if(!tasks){
+        return res.status(404).json({error: 'No tasks found'});
+    }
+    res.json(tasks);
+}
+

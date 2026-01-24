@@ -3,13 +3,14 @@ import Add from '../Components/Add'
 import ViewData from '../Components/ViewData';
 import { useTaskContext } from '../hooks/useTaskContext';
 import axios from "axios";
+import SearchTasks from '../Components/SearchTasks';
 
 const Home = () => {
   const {tasks, dispatch} = useTaskContext();
 
   useEffect(()=>{
     const fetchTasks = async ()=>{
-        const response = await axios.get('https://to-do-list-application-1-b4fh.onrender.com/todos');
+        const response = await axios.get('http://localhost:3000/todos');
 
         if(response.status === 200){
             dispatch({type:'SET_TASK',payload:response.data.data});
@@ -21,7 +22,10 @@ const Home = () => {
 
   return (
     <>
-        <Add />
+        <div className='grid grid-cols-2 gap-10'>
+            <Add />
+            <SearchTasks />
+        </div>
         <div>
             <div>
                 <table className='w-full border mt-10'>

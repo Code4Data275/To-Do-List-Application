@@ -16,6 +16,7 @@
 - View the task 
 - Delete the task
 - Update the task status (Pending/Completed)
+- Search the task
 
 ### UI
 - Header with the title `To Do List Application`
@@ -59,6 +60,9 @@
 
 - /todos/status/{id}
   - PUT: Update task status by checkbox 
+
+- /todos/search
+  - GET: Get the task user wants
 
 ### Database 
 
